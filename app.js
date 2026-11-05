@@ -88,6 +88,7 @@ function openPuzzle(districtKey) {
         dropZone.innerText = "Cevabı Buraya Bırak";
         dropZone.style.background = "";
         dropZone.style.borderColor = "";
+        dropZone.classList.remove('filled');
 
         if (currentDistrictData.sorular[index]) {
             hintText.innerText = currentDistrictData.sorular[index].ipucu;
@@ -279,8 +280,7 @@ function loadAnswers() {
 let selectedCard = null;
 function placeAnswer(zone, text) {
     zone.innerText = text;
-    zone.style.background = '#dcfce7';
-    zone.style.borderColor = '#22c55e';
+    zone.classList.add('filled');
 }
 
 // Drop zone (Bırakma alanları) olayları
